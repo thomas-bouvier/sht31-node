@@ -1,0 +1,23 @@
+{
+  "name": "pi-node-sht31",
+  "version": "0.1.0",
+  "description": "Simple SHT31 library using i2c-bus",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aphotix/raspi-node-sht31.git"
+  },
+  "author": "David Tompkins <david@zde.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aphotix/raspi-node-sht31/issues"
+  },
+  "homepage": "https://github.com/aphotix/raspi-node-sht31#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "i2c-bus": "^1.2.4"
+  }
+}
