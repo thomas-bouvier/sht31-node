@@ -12,6 +12,7 @@ class SHT31 {
     this.statusData = Buffer.alloc(3); // Returns 3 bytes [data,data,checksum]
   }
 
+  // the command is i2cWrite, the Async is added by bulk promisifying using Bluebird promisifyAll.
   sendCommand(command){
     const cmd = Buffer.from([command >> 8, command & 0xFF]); // Commands are 16 bits, >> 8 will return the first 8 bits (left shift 8 bits), & 0xFF will get the last 8 bits.
     return this.sensor.i2cWriteAsync(this.address, 2, cmd);
@@ -62,6 +63,7 @@ class SHT31 {
           return Promise.reject(new Error('Temperature Integrity Check Failed.'));
         }
 
+        // See documentation Page 13, Table 17.
         return {
           WriteStatus: !(data[1] & 0x01),
           CommandStatus: !(data[1] & 0x02),
@@ -75,6 +77,8 @@ class SHT31 {
     });
   }
 
+  /* The heater is intended for plausibility testing only. It should increase
+     the temperature by a few degress. (RH will be impacted as well.) */
   enableHeater(duration){
     const cmd = this.sendCommand(commands.CMD_HEATER_ON);
     if(duration){

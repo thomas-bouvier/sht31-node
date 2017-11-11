@@ -1,6 +1,6 @@
 {
   "name": "raspi-node-sht31",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple SHT31 library using i2c-bus",
   "main": "src/index.js",
   "engines": {

@@ -3,7 +3,7 @@
 const Promise = require('bluebird');
 const i2c = require('i2c-bus');
 
-function checksum(data){ // expects iterable (should be a buffer)
+function checksum(data){ // expects iterable
   const length = data.length;
   const polynomial = 0x31;
 
