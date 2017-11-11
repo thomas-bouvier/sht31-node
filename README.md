@@ -14,12 +14,17 @@ The [data sheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x
 * I²C must be enabled.
 * SHT31 or SHT35 sensor [Adafruit](https://www.adafruit.com/product/2857)
 
+## Dependancies
+* [i2c-bus](https://github.com/fivdi/i2c-bus)
+* [Bluebird](https://github.com/petkaantonov/bluebird/)
+
 ## Usage Example
 ```js
 const SHT31 = require('raspi-node-sht31');
 
 const sht31 = new SHT31();
 
+// Read the temp, after it resolves turn on the sensor heater and get the status, then turn off the heater after 10 seconds and show the status.
 sht31.readSensorData().then(console.log, console.log).finally( () => {
   setTimeout(function(){
     sht31.getStatus().then(console.log, console.log);
@@ -27,3 +32,6 @@ sht31.readSensorData().then(console.log, console.log).finally( () => {
   sht31.enableHeater(10000).then( () => sht31.getStatus() ).then(console.log, console.log);
 });
 ```
+
+## Notes
+Issuing a readSensorData command and then another command before readSensorData has resolved will result in an error.
