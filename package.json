@@ -1,5 +1,5 @@
 {
-  "name": "pi-node-sht31",
+  "name": "raspi-node-sht31",
   "version": "0.1.0",
   "description": "Simple SHT31 library using i2c-bus",
   "main": "src/index.js",
