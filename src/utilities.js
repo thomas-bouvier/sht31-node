@@ -32,11 +32,11 @@ function delay(ms){
 }
 
 function formatTemperature(rawTemp){
-  return Math.round( (((rawTemp * 175) / 0xFFFF) - 45) * 10 ) / 10; // Accurate +/- .2 degress
+  return ((rawTemp * 175) / 0xFFFF) - 45;
 }
 
 function formatHumidity(rawHumidity){
-  return Math.round( (rawHumidity * 100) / 0xFFFF);
+  return (rawHumidity * 100) / 0xFFFF;
 }
 
 module.exports = { checksum, i2cBusPromiseWrapper, delay, formatTemperature, formatHumidity };
