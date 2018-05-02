@@ -45,9 +45,9 @@ const sht31 = new SHT31(); // Paramteres unecessary when using a B+, A+, Zero, Z
 sht31.readSensorData().then((data) => {
   // I love arrow notation functions inside of promises.
 
-  // Temp in Fahrenheit -- this is already rounded to one digit (accuracy is .2 degress, the other digits have no value) Multiplying it can cause some JS floating point weirdness, we just round it off here.
+  // Temp in Fahrenheit -- If you get floating point rouding errors, multiply by ten before rouding, divide by 10 after.
   const temp = Math.round(data.temperature * 1.8 + 32);
-  const humidity = data.humidity;
+  const humidity = Math.round(data.humidity);
 
   console.log(`The temperature is: ${temp} degress F\nThe Humidity is: ${humidity}%`); // Template strings are great.
 

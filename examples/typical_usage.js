@@ -7,7 +7,7 @@ const sht31 = new SHT31(); // Paramteres unecessary when using a B+, A+, Zero, Z
 sht31.readSensorData().then((data) => {
   // I love arrow notation functions inside of promises.
   const temp = Math.round(data.temperature * 1.8 + 32); // Temp in Fahrenheit
-  const humidity = data.humidity;
+  const humidity = Math.round(data.humidity);
 
   console.log(`The temperature is: ${temp} degress F\nThe Humidity is: ${humidity}%`); // Template strings are great.
 
