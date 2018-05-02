@@ -45,7 +45,7 @@ const sht31 = new SHT31(); // Paramteres unecessary when using a B+, A+, Zero, Z
 sht31.readSensorData().then((data) => {
   // I love arrow notation functions inside of promises.
 
-  // Temp in Fahrenheit
+  // Temp in Fahrenheit -- If you get floating point rouding errors, multiply by ten before rouding, divide by 10 after.
   const temp = Math.round(data.temperature * 1.8 + 32);
   const humidity = Math.round(data.humidity);
 
