@@ -1,26 +1,18 @@
-SHT31 Library using i2c-bus for Node.js
-=======================================
+# sht31-node-binding
 
-Read temperature and humidity from the SHT31 sensor on the Raspberry Pi using i2c through the [i2c-bus](https://github.com/fivdi/i2c-bus) package.
+A simple solution to read temperature and humidity from the SHT31 sensor.
 
-## Credit where due
-* Inspired by a python library https://github.com/jaques/sht21_python
-* Initially a fork of Alwin Arrasyid's well written [sht31-node](https://github.com/alwint3r/sht31-node) package.
-  I wanted to use i2c-bus instead of i2c. This code is very similar as a result, and is almost a drop in replacement.
-* The [data sheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-1145192.pdf) made this possible
+This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-1145192.pdf).
 
 ## Requirements
 * A raspberry Pi
-* Node v6 or newer (tested on 6.11.4 and 9.1.0)
-* I²C must be enabled.
+* I2C must be enabled
 * SHT31 or SHT35 sensor [Adafruit](https://www.adafruit.com/product/2857)
+* Node.js v6 or newer
 
-## Dependancies
-* [i2c-bus](https://github.com/fivdi/i2c-bus)
-* [Bluebird](https://github.com/petkaantonov/bluebird/)
+## Usage
 
-## Usage Example
-```js
+```javascript
 const SHT31 = require('raspi-node-sht31');
 
 const sht31 = new SHT31();
@@ -34,8 +26,7 @@ sht31.readSensorData().then(console.log, console.log).finally( () => {
 });
 ```
 
-## A More Typical Usage
-```js
+```javascript
 // Include the library
 const SHT31 = require('raspi-node-sht31');
 // Instantiate the class
@@ -54,5 +45,6 @@ sht31.readSensorData().then((data) => {
 }).catch(console.log);
 ```
 
-## Notes
-Issuing multiple commands before while one is unresolved will result in an error.
+## Credits
+
+Original work by [@aphotix](https://github.com/aphotix). Initially a fork of [@alwint3r](https://github.com/alwint3r)'s well written [sht31-node](https://github.com/alwint3r/sht31-node) package.
