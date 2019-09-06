@@ -1,22 +1,17 @@
 {
   "name": "sht31-node-binding",
   "version": "0.2.1",
-  "description": "Simple SHT31 library using i2c-bus",
   "main": "index.js",
-  "engines": {
-    "node": ">= 6.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aphotix/raspi-node-sht31.git"
-  },
+  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/sht31-node-binding",
   "author": "David Tompkins <david@zde.io>",
+  "contributors": [
+    {
+      "name": "Thomas Bouvier",
+      "email": "contact@thomas-bouvier.io"
+    }
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aphotix/raspi-node-sht31/issues"
-  },
-  "homepage": "https://github.com/aphotix/raspi-node-sht31#readme",
   "dependencies": {
-    "i2c-bus": "^4.0.6"
+    "i2c-bus": "^4.0.10"
   }
 }
