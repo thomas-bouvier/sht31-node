@@ -1,4 +1,4 @@
-# sht31-node-binding
+# sht31-node
 
 A simple solution to read temperature and humidity from the SHT31 sensor.
 
@@ -15,7 +15,7 @@ This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion
 Simply require and instantiate the package as a class. The `readSensorData` method returns a promise.
 
 ```javascript
-const { SHT31 } = require('sht31-node-binding')
+const { SHT31 } = require('sht31-node')
 
 // Parameters are unecessary when using a B+, A+, Zero, Zero W, Pi 2, or Pi 3
 const sht31 = new SHT31()

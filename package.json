@@ -2,7 +2,7 @@
   "name": "sht31-node",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/sht31-node-binding",
+  "repository": "https://thomas-bouvier@github.com/thomas-bouvier/sht31-node",
   "author": "David Tompkins <david@zde.io>",
   "contributors": [
     {
