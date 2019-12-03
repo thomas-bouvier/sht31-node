@@ -5,10 +5,10 @@ A simple solution to read temperature and humidity from the SHT31 sensor.
 This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-1145192.pdf).
 
 ## Requirements
-* A raspberry Pi
+* A Raspberry Pi
 * I2C must be enabled
 * SHT31 or SHT35 sensor [Adafruit](https://www.adafruit.com/product/2857)
-* Node.js v6 or newer
+* Node.js v7.6 or newer
 
 ## Usage
 
