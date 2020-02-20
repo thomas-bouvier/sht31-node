@@ -1,14 +1,21 @@
 # sht31-node
 
-A simple solution to read temperature and humidity from the SHT31 sensor.
+A simple Node.js library to read temperature and humidity values from the SHT31/SHT35 sensors.
 
 This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-1145192.pdf).
 
 ## Requirements
+
 * A Raspberry Pi
 * I2C must be enabled
 * SHT31 or SHT35 sensor [Adafruit](https://www.adafruit.com/product/2857)
 * Node.js v7.6 or newer
+
+## Installation
+
+```bash
+$ npm i sht31-node
+```
 
 ## Usage
 
