@@ -1,5 +1,7 @@
 # sht31-node
 
+[![npm](https://img.shields.io/npm/v/sht31-node.svg)](https://www.npmjs.com/package/sht31-node)
+
 A simple Node.js library to read temperature and humidity values from the SHT31/SHT35 sensors.
 
 This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital-1145192.pdf).
@@ -14,7 +16,8 @@ This library relies on [this datasheet](http://www.mouser.com/ds/2/682/Sensirion
 ## Installation
 
 ```bash
-$ npm i sht31-node
+# Run this in your favourite terminal
+npm i sht31-node
 ```
 
 ## Usage
